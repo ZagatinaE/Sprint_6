@@ -38,7 +38,7 @@ class BasePage:
 
     def scroll_to_element(self, locator):
         element = self.find_element_with_wait(locator)
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", element) #ИЗ ДИПСИКА
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", element) 
 
     def select_selected_date(self):
         selected_date = WebDriverWait(self.driver, 5).until(

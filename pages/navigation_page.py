@@ -18,10 +18,12 @@ class NavigationPage(BasePage):
     def get_main_title_text(self):
         return self.get_text_from_element(NavigationPageLocators.MAIN_TITLE).strip().split('\n')[0].strip()
 
-    @allure.step('Долистать до "Все о дзене" и проверить ')
+    @allure.step('Долистать до "В Дзене применяются" и проверить ')
     def check_about_dzen_present(self):
-        self.scroll_to_element(NavigationPageLocators.ABOUT_DZEN)
-        return self.get_text_from_element(NavigationPageLocators.ABOUT_DZEN)
+        self.scroll_to_element(NavigationPageLocators.SNACKBAR_DZEN)
+        return self.get_text_from_element(NavigationPageLocators.SNACKBAR_DZEN)
+
+
 
 
 
